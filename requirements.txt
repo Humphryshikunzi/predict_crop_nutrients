@@ -1,0 +1,5 @@
+Flask_RESTful==0.3.9
+tensorflow_gpu==2.3.1
+Flask==2.0.1
+numpy==1.17.3
+tensorflow==2.6.0
