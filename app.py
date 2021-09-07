@@ -27,7 +27,7 @@ def predict_crop():
 def predict_crop_nutrient(path):
     print(path)
     class_index, class_value, crop_name =  download_get_crop_predict(path)
-    response = {'prediction_index':class_index, 'prediction_value':class_value, 'predicted_crop':crop_name}
+    response = {'prediction_index':class_index, 'prediction_value':class_value, 'predicted_crop':crop}
     return jsonify(response)
 
 if __name__ == '__main__':
