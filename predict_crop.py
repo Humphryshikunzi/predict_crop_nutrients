@@ -37,15 +37,19 @@ def download_get_crop_predict(image_url):
     class_list = list(class_arr)
     class_index = class_list.index(class_value)
     crop_name = ''
+    nutrients_present = ''
     if class_index == 0:
         crop_name = 'Onion'
+        nutrients_present = 'Nitrogen and Potassium'
     elif class_index == 1:
         crop_name = 'Carrot'
+        nutrients_present = 'Nitrogen and Potassium'
     elif class_index == 2:
         crop_name == 'Maize, Cabbage'
+        nutrients_present = 'Nitrogen, Potassium and Phosphorous'
 
     os.chdir('../')
-    return (str(class_index),str(class_value), crop_name)
+    return (str(class_index),str(class_value), crop_name, nutrients_present)
 
 def random_string_generator(str_size):
     chars = string.ascii_letters #+ string.punctuation

@@ -26,8 +26,8 @@ def predict_crop():
 @app.route('/predict_crop_nutrient/<path:path>')
 def predict_crop_nutrient(path):
     print(path)
-    class_index, class_value, crop_name =  download_get_crop_predict(path)
-    response = {'prediction_index':class_index, 'prediction_value':class_value, 'predicted_crop':crop}
+    class_index, class_value, crop_name, nutrients_present =  download_get_crop_predict(path)
+    response = {'prediction_index':class_index, 'prediction_value':class_value, 'predicted_crop':crop_name , 'nutrients_present':nutrients_present}
     return jsonify(response)
 
 if __name__ == '__main__':
